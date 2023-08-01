@@ -1,0 +1,513 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Share Tech Mono", sans-serif;
+  margin: 0;
+}
+
+#wrapper {
+  width: 100%;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1em;
+}
+
+main {
+  padding-left: 0.25rem;
+  margin: 1em;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.header-div a {
+  margin: 0 0.5em;
+  text-decoration: none;
+}
+.header-div a:last-child {
+  margin-right: 1em;
+}
+.btn_myaccount {
+  margin: auto 1em;
+  text-decoration: none;
+  color: #000;
+}
+
+.navbar {
+  background-color: #3a3a3a;
+}
+
+.navbar {
+  margin-top: 1em;
+}
+.navbar ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+.navbar ul li {
+  padding: 1em 0.5em;
+}
+.navbar ul li a {
+  font-size: 0.9em;
+  text-decoration: none;
+  color: #ffffff;
+}
+.navbar ul li:hover {
+  background-color: #ffffff;
+  color: #000;
+}
+.navbar ul li:hover a {
+  color: #000;
+}
+.footer {
+  text-align: center;
+}
+.footer p {
+  margin: 0;
+}
+
+/* Home Page */
+.dolorean_image {
+  width: 100%;
+  position: relative;
+  top: -60px;
+  z-index: 0;
+}
+.text_hover {
+  position: relative;
+  float: left;
+  z-index: 1;
+}
+.features_dolorean {
+  color: #3a3a3a;
+  margin-left: 0.5em;
+  font-weight: bold;
+}
+.features_dolorean h2 {
+  margin: 0;
+}
+.features_dolorean ul {
+  margin: 0;
+  padding: 0;
+}
+.features_dolorean ul li {
+  list-style: none;
+}
+.btn_owntoday {
+  display: grid;
+  justify-content: center;
+}
+.grid_section {
+  margin: 0.5em;
+}
+.images_upgrade_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+}
+.images_upgrade_container div {
+  text-align: center;
+}
+.images_upgrade_container div div {
+  background-color: #4c96d7;
+  width: 100%;
+  height: 100px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Login and Registration Page */
+#login-main,
+#main-registration {
+  margin: 2em;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+#login-main h1,
+#main-registration h1 {
+  justify-self: center;
+}
+.form-class div,
+.form-class div label {
+  margin: 0.5em 0;
+}
+.form-class input {
+  width: 100%;
+  outline: none;
+  padding: 0.5em;
+  border-radius: 10px;
+  border: 1px solid #4c96d7;
+}
+.form-class input:focus {
+  box-shadow: 2px 2px 2px 2px #000;
+}
+
+.newAccountLink,
+.btn_myaccount,
+.search-result a {
+  color: #000;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+.newAccountLink::before,
+.btn_myaccount::before,
+.search-result a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+.btn_myaccount::before {
+  top: 65%;
+}
+
+#btn_manage-vehicle {
+  margin: 0;
+}
+#btn_manage-vehicle::before {
+  top: 100%;
+}
+
+.newAccountLink:hover::before,
+.btn_myaccount:hover::before,
+.search-result a:hover::before {
+  transform: scaleX(1);
+}
+
+#btnSubmit,
+.btnSubmitUpdate {
+  margin: 1em auto;
+  cursor: pointer;
+  padding: 0.5em 2em;
+  border-radius: 20px;
+  border: 1px solid #000;
+}
+#btnSubmit:hover,
+.btnSubmitUpdate:hover {
+  background-color: #3a3a3a;
+  color: #ffffff;
+}
+
+#inv-display {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 2em;
+}
+
+#inv-display h2 {
+  margin: 0 0 1em;
+  font-size: 1rem;
+}
+#inv-display li a {
+  text-decoration: none;
+  color: #000;
+  height: 150px;
+}
+
+#inv-display li {
+  margin-bottom: 0.5em;
+  border: 1px #ccc solid;
+  list-style-type: none;
+  flex: 1 1 auto;
+  max-width: 200px;
+  border-radius: 25px;
+  text-align: center;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+#inv-display li a img {
+  max-height: 150px;
+  border-radius: 25px;
+}
+#inv-display li hr {
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+
+/* Detail Page */
+.detail-container {
+  display: grid;
+  gap: 2em;
+}
+
+#thumbnail--detail-display {
+  grid-row: 2/3;
+}
+
+.thumbnail-title {
+  display: block;
+}
+#inv-display li img {
+  max-width: 100%;
+}
+
+#inv--detail-display {
+  display: grid;
+  gap: 1em;
+}
+#inv--detail-display img {
+  max-width: 100%;
+  margin: auto 0;
+}
+#thumbnail--detail-display div img {
+  transition: transform 0.3s ease;
+}
+#thumbnail--detail-display div img:hover {
+  transform: scale(1.8);
+}
+
+#thumbnail--detail-display div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+/* Image Page */
+.image-form {
+  border: #000 solid 1px;
+  padding: 1em;
+  border-radius: 10px;
+}
+.image-form div {
+  margin-bottom: 1em;
+}
+.image-form div:first-child {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 1em;
+}
+.image-form fieldset {
+  border: none;
+}
+.selectInvId {
+  border-radius: 10px;
+  padding: 0.5em 0;
+}
+.uploadImageBtn {
+  cursor: pointer;
+  padding: 0.3em 1em;
+  border-radius: 20px;
+}
+#image-display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0;
+}
+
+#image-display li {
+  list-style: none;
+  padding: 0;
+}
+
+#image-display li img {
+  min-width: 200px;
+  width: 300px;
+}
+
+.delete-image {
+  padding: 0.5em;
+  background-color: #3a3a3a;
+  border-radius: 20px;
+  text-align: center;
+}
+.delete-image a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* Search Page Styles */
+
+.search-container {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.search-result {
+  list-style: none;
+  padding: 0.5em 1em;
+  border: #000 solid 1px;
+}
+.search-result a {
+  text-decoration: none;
+  color: #000;
+}
+
+.notice {
+  color: #b60101;
+}
+.pagination-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5em 0;
+  gap: 0.5em;
+  font-size: 1.5em;
+}
+.current {
+  background-color: #3a3a3a;
+  padding: 0.3em;
+  color: #ffffff;
+  border-radius: 50%;
+}
+.pagination-bar a {
+  text-decoration: none;
+  color: #000;
+}
+
+.results {
+  display: flex;
+}
+
+#search {
+  margin-top: 1em;
+  text-indent: 0.2em;
+  padding: 0.3em;
+}
+#submitSearch {
+  padding: 0.3em 1em;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: #3a3a3a;
+  color: #ffffff;
+}
+
+#submitSearch:hover {
+  background-color: #ffffff;
+  color: #000;
+}
+/* End Search Page Styles */
+
+/* Media Queries */
+@media only screen and (min-width: 768px) {
+  body {
+    background-image: url("/phpmotors/images/site/small_check.jpg");
+    background-size: cover;
+  }
+  .btn_myaccount {
+    margin: auto 3em;
+  }
+  .navbar a {
+    padding: 1em 0em;
+  }
+  #wrapper {
+    border: 5px solid #4c96d7;
+    border-radius: 10px;
+    margin-top: 1em;
+    width: 75%;
+  }
+  /* Home Page */
+  .text_hover {
+    position: absolute;
+  }
+  .features_dolorean {
+    position: absolute;
+    left: 25px;
+    top: 70px;
+  }
+  .btn_owntoday {
+    position: absolute;
+    left: 145px;
+    top: 335px;
+  }
+  .btn_owntoday img {
+    width: 70%;
+  }
+  .dolorean_image {
+    position: static;
+    margin-top: 5em;
+  }
+  .grid_section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 2em 1em;
+    gap: 3em;
+  }
+  .upgrades_container {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  /* For vehicle display in classification view */
+  #inv-display {
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+
+  /* Detail Vehicle */
+  .detail-container {
+    display: flex;
+    margin: 2em 0 5em;
+  }
+  #inv--detail-display {
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  #inv--detail-display img {
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+  }
+  .thumbnail-title {
+    display: none;
+  }
+  #thumbnail--detail-display div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5em;
+  }
+  /* Image Page */
+}
+
+@media only screen and (min-width: 1366px) {
+  .features_dolorean {
+    position: absolute;
+    left: 70px;
+    top: 100px;
+  }
+  .btn_owntoday {
+    position: absolute;
+    left: 340px;
+    top: 380px;
+  }
+}
