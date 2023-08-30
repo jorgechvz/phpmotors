@@ -1,9 +1,9 @@
 <?php 
 function phpmotorsConnect() {
-    $server = 'localhost';
-    $dbname = 'phpmotors';
-    $username = 'iClient';
-    $password = '8J**EG]Cs0YxI3pN';
+    $server = 'nyc.domcloud.id';
+    $dbname = 'ironclad_respect_liv_db';
+    $username = 'ironclad-respect-liv';
+    $password = '+E-pzp7q962YJA(8Mm';
     $dsn = "mysql:host=$server;dbname=$dbname";
     $options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
     try {
