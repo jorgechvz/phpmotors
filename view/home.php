@@ -16,10 +16,10 @@
 <body>
     <div id="wrapper">
         <header class="header">
-            <?php include $_SERVER['DOCUMENT_ROOT'] . "/public_html/common/header.php" ?>
+            <?php include $_SERVER['DOCUMENT_ROOT'] . "/phpmotors/common/header.php" ?>
         </header>
         <nav class="navbar">
-            <?php //include $_SERVER['DOCUMENT_ROOT'] . "/public_html/common/nav.php" 
+            <?php //include $_SERVER['DOCUMENT_ROOT'] . "/phpmotors/common/nav.php" 
             echo $navList;
             ?>
         </nav>
@@ -85,7 +85,7 @@
         </main>
         <hr>
         <footer class="footer">
-            <?php include $_SERVER['DOCUMENT_ROOT'] . "/public_html/common/footer.php" ?>
+            <?php include $_SERVER['DOCUMENT_ROOT'] . "/phpmotors/common/footer.php" ?>
         </footer>
     </div>
 </body>
