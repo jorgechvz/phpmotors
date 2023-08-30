@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/normalize.css" type="text/css" rel="stylesheet" media="screen">
-    <link href="../css/styles.css" type="text/css" rel="stylesheet" media="screen">
+    <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
