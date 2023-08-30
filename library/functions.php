@@ -34,7 +34,7 @@ function createNavbar($carclassifications)
 {
     $navList = '<ul>';
 
-    $navList .= "<li><a href='/phpmotors/' title='View the PHP Motors home page'>Home</a></li>";
+    $navList .= "<li><a href='/' title='View the PHP Motors home page'>Home</a></li>";
 
     foreach ($carclassifications as $classification) {
         $navList .= "<li><a href='/vehicles/?action=classification&classificationName=" . urlencode($classification['classificationName']) . "' title='View our $classification[classificationName] lineup of vehicles'>$classification[classificationName]</a></li>";
