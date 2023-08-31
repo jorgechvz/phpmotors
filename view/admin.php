@@ -1,6 +1,6 @@
 <?php
 if (!isset($_SESSION['loggedin'])) {
-  header('Location: /phpmotors/index.php');
+  header('Location: /index.php');
 }
 if (isset($_SESSION['message'])) {
   $message = $_SESSION['message'];
@@ -21,17 +21,17 @@ if (isset($_SESSION['message'])) {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-  <link href="/phpmotors/css/normalize.css" type="text/css" rel="stylesheet" media="screen">
-  <link href="/phpmotors/css/style.css" type="text/css" rel="stylesheet" media="screen">
+  <link href="../css/normalize.css" type="text/css" rel="stylesheet" media="screen">
+  <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen">
 </head>
 
 <body>
   <div id="wrapper">
     <header class="header">
-      <?php include $_SERVER['DOCUMENT_ROOT'] . "/phpmotors/common/header.php" ?>
+      <?php include $_SERVER['DOCUMENT_ROOT'] . "/common/header.php" ?>
     </header>
     <nav class="navbar">
-      <?php /* include $_SERVER['DOCUMENT_ROOT'] . "/phpmotors/common/nav.php"  */
+      <?php /* include $_SERVER['DOCUMENT_ROOT'] . "/common/nav.php"  */
       echo $navList;
       ?>
     </nav>
@@ -50,18 +50,18 @@ if (isset($_SESSION['message'])) {
       ?>
       <h2>Account Management</h2>
       <p>Use this link to update account information</p>
-      <a class='btn_myaccount' id='btn_manage-vehicle' href='/phpmotors/accounts/index.php?action=update'>Update Account Information</a>
+      <a class='btn_myaccount' id='btn_manage-vehicle' href='/accounts/index.php?action=update'>Update Account Information</a>
       <?php
       if ($_SESSION['clientData']['clientLevel'] > "1") {
         echo "<h2>Inventory Management</h2>";
         echo "<p>Use this link to manage the inventory</p>";
-        echo "<a class='btn_myaccount' id='btn_manage-vehicle' href='/phpmotors/vehicles/index.php'>Vehicle Management</a>";
+        echo "<a class='btn_myaccount' id='btn_manage-vehicle' href='/vehicles/index.php'>Vehicle Management</a>";
       }
       ?>
     </main>
     <hr>
     <footer class="footer">
-      <?php include $_SERVER['DOCUMENT_ROOT'] . "/phpmotors/common/footer.php" ?>
+      <?php include $_SERVER['DOCUMENT_ROOT'] . "/common/footer.php" ?>
     </footer>
   </div>
 </body>

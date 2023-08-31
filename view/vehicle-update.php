@@ -18,9 +18,9 @@ foreach ($classifications as $classification) {
 $classifList .= '</select>';
 
 if (!isset($_SESSION['loggedin'])) {
-    header('Location: /phpmotors/index.php');
+    header('Location: /index.php');
 } else if ($_SESSION['clientData']['clientLevel'] <= 1) {
-    header('Location: /phpmotors/index.php');
+    header('Location: /index.php');
 }
 ?>
 <!DOCTYPE html>
@@ -40,17 +40,17 @@ if (!isset($_SESSION['loggedin'])) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    <link href="/phpmotors/css/normalize.css" type="text/css" rel="stylesheet" media="screen">
-    <link href="/phpmotors/css/style.css" type="text/css" rel="stylesheet" media="screen">
+    <link href="/css/normalize.css" type="text/css" rel="stylesheet" media="screen">
+    <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen">
 </head>
 
 <body>
     <div id="wrapper">
         <header class="header">
-            <?php include $_SERVER['DOCUMENT_ROOT'] . "/phpmotors/common/header.php" ?>
+            <?php include $_SERVER['DOCUMENT_ROOT'] . "/common/header.php" ?>
         </header>
         <nav class="navbar">
-            <?php /* include $_SERVER['DOCUMENT_ROOT'] . "/phpmotors/common/nav.php"  */
+            <?php /* include $_SERVER['DOCUMENT_ROOT'] . "/common/nav.php"  */
             echo $navList;
             ?>
         </nav>
@@ -67,7 +67,7 @@ if (!isset($_SESSION['loggedin'])) {
                 echo $message;
             }
             ?>
-            <form method="post" action="/phpmotors/vehicles/index.php" class="f-signup form-class">
+            <form method="post" action="/vehicles/index.php" class="f-signup form-class">
                 <div>
                     <label>Choose Car Classification </label>
                     <?php
@@ -152,7 +152,7 @@ if (!isset($_SESSION['loggedin'])) {
         </main>
         <hr>
         <footer class="footer">
-            <?php include $_SERVER['DOCUMENT_ROOT'] . "/phpmotors/common/footer.php" ?>
+            <?php include $_SERVER['DOCUMENT_ROOT'] . "/common/footer.php" ?>
         </footer>
     </div>
 </body>

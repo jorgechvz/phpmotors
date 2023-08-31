@@ -16,17 +16,17 @@ if (isset($_SESSION['message'])) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    <link href="/phpmotors/css/normalize.css" type="text/css" rel="stylesheet" media="screen">
-    <link href="/phpmotors/css/style.css" type="text/css" rel="stylesheet" media="screen">
+    <link href="/css/normalize.css" type="text/css" rel="stylesheet" media="screen">
+    <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen">
 </head>
 
 <body>
     <div id="wrapper">
         <header class="header">
-            <?php include $_SERVER['DOCUMENT_ROOT'] . "/phpmotors/common/header.php" ?>
+            <?php include $_SERVER['DOCUMENT_ROOT'] . "/common/header.php" ?>
         </header>
         <nav class="navbar">
-            <?php /* include $_SERVER['DOCUMENT_ROOT'] . "/phpmotors/common/nav.php"  */
+            <?php /* include $_SERVER['DOCUMENT_ROOT'] . "/common/nav.php"  */
             echo $navList;
             ?>
         </nav>
@@ -38,7 +38,7 @@ if (isset($_SESSION['message'])) {
                 echo $message;
             } ?>
 
-            <form class="image-form" action="/phpmotors/uploads/" method="post" enctype="multipart/form-data">
+            <form class="image-form" action="/uploads/" method="post" enctype="multipart/form-data">
                 <div>
                     <label class="labelInvId">Vehicle</label>
                     <?php echo $prodSelect; ?>
@@ -67,7 +67,7 @@ if (isset($_SESSION['message'])) {
         </main>
         <hr>
         <footer class="footer">
-            <?php include $_SERVER['DOCUMENT_ROOT'] . "/phpmotors/common/footer.php" ?>
+            <?php include $_SERVER['DOCUMENT_ROOT'] . "/common/footer.php" ?>
         </footer>
     </div>
 </body>

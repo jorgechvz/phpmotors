@@ -61,12 +61,12 @@ function buildVehiclesDisplay($vehicles)
     $dv = '<ul id="inv-display">';
     foreach ($vehicles as $vehicle) {
         $dv .= '<li>';
-        $dv .= "<a href='/phpmotors/vehicles/?action=vehicle&invId=" . urlencode($vehicle['invId']) . "'>";
-        $dv .= "<img src='$vehicle[imgPath]' alt='Image of $vehicle[invMake] $vehicle[invModel] on phpmotors.com'>";
+        $dv .= "<a href='/vehicles/?action=vehicle&invId=" . urlencode($vehicle['invId']) . "'>";
+        $dv .= "<img src='$vehicle[imgPath]' alt='Image of $vehicle[invMake] $vehicle[invModel] ophpmotors.com'>";
         $dv .= '</a>';
         $dv .= '<hr>';
         $dv .= '<div>';
-        $dv .= "<a href='/phpmotors/vehicles/?action=vehicle&invId=" . urlencode($vehicle['invId']) . "'>";
+        $dv .= "<a href='/vehicles/?action=vehicle&invId=" . urlencode($vehicle['invId']) . "'>";
         $dv .= "<h2>$vehicle[invMake] $vehicle[invModel]</h2>";
         $dv .= '</a>';
         $dv .= "<span>$" . number_format($vehicle['invPrice']) . "</span>";
@@ -128,7 +128,7 @@ function buildImageDisplay($imageArray)
     foreach ($imageArray as $image) {
         $id .= '<li>';
         $id .= "<img src='$image[imgPath]' title='$image[invMake] $image[invModel] image on PHP Motors.com' alt='$image[invMake] $image[invModel] image on PHP Motors.com'>";
-        $id .= "<p class='delete-image'><a href='/phpmotors/uploads?action=delete&imgId=$image[imgId]&filename=$image[imgName]' title='Delete the image'>Delete $image[imgName]</a></p>";
+        $id .= "<p class='delete-image'><a href='/uploads?action=delete&imgId=$image[imgId]&filename=$image[imgName]' title='Delete the image'>Delete $image[imgName]</a></p>";
         $id .= '</li>';
     }
     $id .= '</ul>';
@@ -285,7 +285,7 @@ function displaySearchResults($searchResults)
     // Loop for every result
     foreach ($searchResults as $results) {
         $sr .= '<li class="search-result">';
-        $sr .= "<a href='/phpmotors/vehicles/?action=vehicle&invId=$results[invId]' title='View the $results[invYear] $results[invMake] $results[invModel]'><h2>$results[invYear] $results[invMake] $results[invModel]</h2></a>";
+        $sr .= "<a href='/vehicles/?action=vehicle&invId=$results[invId]' title='View the $results[invYear] $results[invMake] $results[invModel]'><h2>$results[invYear] $results[invMake] $results[invModel]</h2></a>";
         $sr .= "<p>$results[invDescription]</p>";
         $sr .= '</li>';
     }

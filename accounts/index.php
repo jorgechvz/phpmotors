@@ -41,7 +41,7 @@ switch ($action) {
         break;
     case 'logout':
         session_destroy();
-        header('Location: /phpmotors/index.php');
+        header('Location: /index.php');
         break;
     case 'registration':
         include "../view/registration.php";
@@ -118,7 +118,7 @@ switch ($action) {
         if ($regOutcome === 1) {
             setcookie('firstname', $clientFirstname, strtotime('+1 year'), '/');
             $_SESSION['message'] = "Thanks for registering $clientFirstname. Please use your email and password to login.";
-            header('Location: /phpmotors/accounts/?action=login');
+            header('Location: /accounts/?action=login');
             exit;
         } else {
             $message = "<p>Sorry $clientFirstname, but the registration failed. Please try again.</p>";
@@ -166,7 +166,7 @@ switch ($action) {
             $_SESSION['clientData'] = $updateClientData;
             $message = "<p class='notify'>Congratulations, your account info was successfully updated.</p>";
             $_SESSION['message'] = $message;
-            header('location: /phpmotors/accounts/index.php');
+            header('location: /accounts/index.php');
             exit;
         } else {
             $message = "<p>Error. Your account info was not updated.</p>";
@@ -193,7 +193,7 @@ switch ($action) {
         if ($updateClientPassword) {
             $message = "<p class='notify'>Congratulations, your password was successfully updated.</p>";
             $_SESSION['message'] = $message;
-            header('location: /phpmotors/accounts/index.php');
+            header('location: /accounts/index.php');
             exit;
         } else {
             $message = "<p>Error. Your password was not updated.</p>";

@@ -1,8 +1,8 @@
 <?php
 if (!isset($_SESSION['loggedin'])) {
-    header('Location: /phpmotors/index.php');
+    header('Location: /index.php');
 } else if ($_SESSION['clientData']['clientLevel'] < 2) {
-    header('location: /phpmotors/');
+    header('location: /');
     exit;
 }
 if (isset($_SESSION['message'])) {
@@ -22,25 +22,26 @@ if (isset($_SESSION['message'])) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    <link href="/phpmotors/css/normalize.css" type="text/css" rel="stylesheet" media="screen">
-    <link href="/phpmotors/css/style.css" type="text/css" rel="stylesheet" media="screen">
+    <link href="/css/normalize.css" type="text/css" rel="stylesheet" media="screen">
+    <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen">
 </head>
 
 <body>
     <div id="wrapper">
         <header class="header">
-            <?php include $_SERVER['DOCUMENT_ROOT'] . "/phpmotors/common/header.php" ?>
+            <?php include $_SERVER['DOCUMENT_ROOT'] . "/common/header.php" ?>
         </header>
         <nav class="navbar">
-            <?php /* include $_SERVER['DOCUMENT_ROOT'] . "/phpmotors/common/nav.php"  */
+            <?php /* include $_SERVER['DOCUMENT_ROOT'] . "/common/nav.php"  */
             echo $navList;
             ?>
         </nav>
         <main id="main-vehicle-management">
             <h1>Vehicle Management</h1>
             <ul>
-                <li><a href="/phpmotors/vehicles/index.php?action=addClassification">Add Classification</a></li>
-                <li><a href="/phpmotors/vehicles/index.php?action=addVehicle">Add Vehicle</a></li>
+                <li><a href="/vehicles/index.php?action=addClassification">Add Classification</a></li>
+                <li><a href="/vehicles/index.php?action=addVehicle">Add Vehicle</a></li>
+                <li><a href="/uploads/index.php">Add Vehicle Image</a></li>
             </ul>
             <?php
             if (isset($message)) {
@@ -59,7 +60,7 @@ if (isset($_SESSION['message'])) {
         </main>
         <hr>
         <footer class="footer">
-            <?php include $_SERVER['DOCUMENT_ROOT'] . "/phpmotors/common/footer.php" ?>
+            <?php include $_SERVER['DOCUMENT_ROOT'] . "/common/footer.php" ?>
         </footer>
     </div>
     <script src="../js/inventory.js"></script>
